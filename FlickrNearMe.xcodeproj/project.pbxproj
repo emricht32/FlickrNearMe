@@ -16,9 +16,18 @@
 		840E2A4216489759002C8BCF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A4116489759002C8BCF /* Default.png */; };
 		840E2A4416489759002C8BCF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A4316489759002C8BCF /* Default@2x.png */; };
 		840E2A4616489759002C8BCF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A4516489759002C8BCF /* Default-568h@2x.png */; };
-		840E2A4916489759002C8BCF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A4716489759002C8BCF /* MainStoryboard.storyboard */; };
-		840E2A4C16489759002C8BCF /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A4B16489759002C8BCF /* MasterViewController.m */; };
-		840E2A4F16489759002C8BCF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A4E16489759002C8BCF /* DetailViewController.m */; };
+		840E2A4916489759002C8BCF /* pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A4716489759002C8BCF /* pad.storyboard */; };
+		840E2A5E1648B06F002C8BCF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840E2A5D1648B06F002C8BCF /* CoreLocation.framework */; };
+		840E2A601648B07C002C8BCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840E2A5F1648B07C002C8BCF /* MapKit.framework */; };
+		840E2A6D164AC7DF002C8BCF /* FlickrPhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A68164AC7DF002C8BCF /* FlickrPhotoTableViewController.m */; };
+		840E2A6E164AC7DF002C8BCF /* FlickrPhotoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A6A164AC7DF002C8BCF /* FlickrPhotoAnnotation.m */; };
+		840E2A6F164AC7DF002C8BCF /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A6C164AC7DF002C8BCF /* MapViewController.m */; };
+		840E2A73164AC80D002C8BCF /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A72164AC80D002C8BCF /* FlickrFetcher.m */; };
+		840E2A76164AC820002C8BCF /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E2A75164AC820002C8BCF /* MKMapView+ZoomLevel.m */; };
+		840E2A7A164AD678002C8BCF /* phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840E2A79164AD678002C8BCF /* phone.storyboard */; };
+		84952C1516B389E000D84334 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84952C1416B389E000D84334 /* iAd.framework */; };
+		84952C1816B389E900D84334 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84952C1716B389E900D84334 /* AdSupport.framework */; };
+		84D44F34164CCB6900A65D7D /* CamaraCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D44F33164CCB6900A65D7D /* CamaraCaptureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +44,26 @@
 		840E2A4116489759002C8BCF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		840E2A4316489759002C8BCF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		840E2A4516489759002C8BCF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		840E2A4816489759002C8BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		840E2A4A16489759002C8BCF /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		840E2A4B16489759002C8BCF /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		840E2A4D16489759002C8BCF /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		840E2A4E16489759002C8BCF /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		840E2A4816489759002C8BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/pad.storyboard; sourceTree = "<group>"; };
+		840E2A5D1648B06F002C8BCF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		840E2A5F1648B07C002C8BCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		840E2A67164AC7DF002C8BCF /* FlickrPhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoTableViewController.h; sourceTree = "<group>"; };
+		840E2A68164AC7DF002C8BCF /* FlickrPhotoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoTableViewController.m; sourceTree = "<group>"; };
+		840E2A69164AC7DF002C8BCF /* FlickrPhotoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotoAnnotation.h; sourceTree = "<group>"; };
+		840E2A6A164AC7DF002C8BCF /* FlickrPhotoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotoAnnotation.m; sourceTree = "<group>"; };
+		840E2A6B164AC7DF002C8BCF /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		840E2A6C164AC7DF002C8BCF /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		840E2A70164AC80D002C8BCF /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
+		840E2A71164AC80D002C8BCF /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
+		840E2A72164AC80D002C8BCF /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
+		840E2A74164AC820002C8BCF /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		840E2A75164AC820002C8BCF /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		840E2A79164AD678002C8BCF /* phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = phone.storyboard; sourceTree = "<group>"; };
+		84952C1416B389E000D84334 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		84952C1716B389E900D84334 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		84D44F32164CCB6900A65D7D /* CamaraCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamaraCaptureViewController.h; sourceTree = "<group>"; };
+		84D44F33164CCB6900A65D7D /* CamaraCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamaraCaptureViewController.m; sourceTree = "<group>"; };
+		84DDFBB4164ECF120018C0E1 /* SystemVersioningPreProcessorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemVersioningPreProcessorMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84952C1816B389E900D84334 /* AdSupport.framework in Frameworks */,
+				84952C1516B389E000D84334 /* iAd.framework in Frameworks */,
+				840E2A601648B07C002C8BCF /* MapKit.framework in Frameworks */,
+				840E2A5E1648B06F002C8BCF /* CoreLocation.framework in Frameworks */,
 				840E2A3016489759002C8BCF /* UIKit.framework in Frameworks */,
 				840E2A3216489759002C8BCF /* Foundation.framework in Frameworks */,
 				840E2A3416489759002C8BCF /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +104,10 @@
 		840E2A2E16489759002C8BCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840E2A5F1648B07C002C8BCF /* MapKit.framework */,
+				84952C1716B389E900D84334 /* AdSupport.framework */,
+				84952C1416B389E000D84334 /* iAd.framework */,
+				840E2A5D1648B06F002C8BCF /* CoreLocation.framework */,
 				840E2A2F16489759002C8BCF /* UIKit.framework */,
 				840E2A3116489759002C8BCF /* Foundation.framework */,
 				840E2A3316489759002C8BCF /* CoreGraphics.framework */,
@@ -88,11 +120,22 @@
 			children = (
 				840E2A3E16489759002C8BCF /* AppDelegate.h */,
 				840E2A3F16489759002C8BCF /* AppDelegate.m */,
-				840E2A4716489759002C8BCF /* MainStoryboard.storyboard */,
-				840E2A4A16489759002C8BCF /* MasterViewController.h */,
-				840E2A4B16489759002C8BCF /* MasterViewController.m */,
-				840E2A4D16489759002C8BCF /* DetailViewController.h */,
-				840E2A4E16489759002C8BCF /* DetailViewController.m */,
+				84DDFBB4164ECF120018C0E1 /* SystemVersioningPreProcessorMacros.h */,
+				840E2A79164AD678002C8BCF /* phone.storyboard */,
+				840E2A4716489759002C8BCF /* pad.storyboard */,
+				84D44F32164CCB6900A65D7D /* CamaraCaptureViewController.h */,
+				84D44F33164CCB6900A65D7D /* CamaraCaptureViewController.m */,
+				840E2A67164AC7DF002C8BCF /* FlickrPhotoTableViewController.h */,
+				840E2A68164AC7DF002C8BCF /* FlickrPhotoTableViewController.m */,
+				840E2A69164AC7DF002C8BCF /* FlickrPhotoAnnotation.h */,
+				840E2A6A164AC7DF002C8BCF /* FlickrPhotoAnnotation.m */,
+				840E2A6B164AC7DF002C8BCF /* MapViewController.h */,
+				840E2A6C164AC7DF002C8BCF /* MapViewController.m */,
+				840E2A70164AC80D002C8BCF /* FlickrAPIKey.h */,
+				840E2A71164AC80D002C8BCF /* FlickrFetcher.h */,
+				840E2A72164AC80D002C8BCF /* FlickrFetcher.m */,
+				840E2A74164AC820002C8BCF /* MKMapView+ZoomLevel.h */,
+				840E2A75164AC820002C8BCF /* MKMapView+ZoomLevel.m */,
 				840E2A3616489759002C8BCF /* Supporting Files */,
 			);
 			path = FlickrNearMe;
@@ -167,7 +210,8 @@
 				840E2A4216489759002C8BCF /* Default.png in Resources */,
 				840E2A4416489759002C8BCF /* Default@2x.png in Resources */,
 				840E2A4616489759002C8BCF /* Default-568h@2x.png in Resources */,
-				840E2A4916489759002C8BCF /* MainStoryboard.storyboard in Resources */,
+				840E2A4916489759002C8BCF /* pad.storyboard in Resources */,
+				840E2A7A164AD678002C8BCF /* phone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,8 +224,12 @@
 			files = (
 				840E2A3C16489759002C8BCF /* main.m in Sources */,
 				840E2A4016489759002C8BCF /* AppDelegate.m in Sources */,
-				840E2A4C16489759002C8BCF /* MasterViewController.m in Sources */,
-				840E2A4F16489759002C8BCF /* DetailViewController.m in Sources */,
+				840E2A6D164AC7DF002C8BCF /* FlickrPhotoTableViewController.m in Sources */,
+				840E2A6E164AC7DF002C8BCF /* FlickrPhotoAnnotation.m in Sources */,
+				840E2A6F164AC7DF002C8BCF /* MapViewController.m in Sources */,
+				840E2A73164AC80D002C8BCF /* FlickrFetcher.m in Sources */,
+				840E2A76164AC820002C8BCF /* MKMapView+ZoomLevel.m in Sources */,
+				84D44F34164CCB6900A65D7D /* CamaraCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,12 +244,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		840E2A4716489759002C8BCF /* MainStoryboard.storyboard */ = {
+		840E2A4716489759002C8BCF /* pad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				840E2A4816489759002C8BCF /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = pad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -264,8 +312,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrNearMe/FlickrNearMe-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"OS_OBJECT_USE_OBJC=0",
+					"DEBUG=1",
+				);
 				INFOPLIST_FILE = "FlickrNearMe/FlickrNearMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -275,8 +329,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickrNearMe/FlickrNearMe-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "OS_OBJECT_USE_OBJC=0";
 				INFOPLIST_FILE = "FlickrNearMe/FlickrNearMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -300,6 +357,7 @@
 				840E2A5416489759002C8BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

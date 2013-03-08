@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="YZF-lS-7fW">
+    <dependencies>
+        <deployment version="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Flickr Photo Table View Controller - FlickrNearMe-->
+        <scene sceneID="OZF-gq-fI7">
+            <objects>
+                <tableViewController id="LxI-Uj-Y5C" customClass="FlickrPhotoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="k03-ht-cWV">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <adBannerView key="tableFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ocl-V1-1OW">
+                            <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="LxI-Uj-Y5C" id="0FP-iA-F8E"/>
+                            </connections>
+                        </adBannerView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="n8z-bS-xMo">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem systemItem="camera" id="jXB-wr-3r6">
+                            <connections>
+                                <segue destination="NKb-5F-gyF" kind="push" id="pQ1-XS-n3t"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="FlickrNearMe" id="PTl-yg-BzI">
+                        <barButtonItem key="leftBarButtonItem" title="Map" id="yOS-ul-3AA">
+                            <connections>
+                                <segue destination="EFD-DH-ANF" kind="push" identifier="MapView" id="iwU-nI-8Zh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="DBS-c1-PrY">
+                            <connections>
+                                <action selector="refresh:" destination="LxI-Uj-Y5C" id="vUN-Zw-nwT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="iAd" destination="ocl-V1-1OW" id="WoX-UX-iQv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6OB-d5-Z6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-50"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="9pV-JM-GGN">
+            <objects>
+                <viewController id="EFD-DH-ANF" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8eN-gU-sFd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="SgP-7i-TQ3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="410"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EFD-DH-ANF" id="XOF-he-uFm"/>
+                                </connections>
+                            </mapView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="C9G-Or-9Gh">
+                                <rect key="frame" x="0.0" y="410" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gyU-aZ-lTG">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="OhV-yK-Npz">
+                            <connections>
+                                <action selector="getBounds:" destination="EFD-DH-ANF" id="dHi-cS-a1D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="SgP-7i-TQ3" id="quI-SC-fBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLs-X7-6Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="-50"/>
+        </scene>
+        <!--View Controller - Item-->
+        <scene sceneID="ncQ-1w-sIA">
+            <objects>
+                <viewController id="4Fp-2N-76D" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cbB-Kh-h2m">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yie-z4-96s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFN-NB-g7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="624"/>
+        </scene>
+        <!--Camara Capture View Controller-->
+        <scene sceneID="vKH-S0-3vs">
+            <objects>
+                <viewController id="NKb-5F-gyF" customClass="CamaraCaptureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rRQ-Bf-Q0m">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="qtL-c6-klY">
+                            <connections>
+                                <action selector="camara:" destination="NKb-5F-gyF" id="xrp-Xg-KY5"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="qQ6-9t-KgG"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6b6-1B-YIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="652"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="UbS-R0-jbc">
+            <objects>
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="cJR-bk-RtO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="K8I-Hv-j7U"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ob2-D5-WsC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kBG-UI-h6E">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="LxI-Uj-Y5C" kind="relationship" relationship="rootViewController" id="uK2-AU-AJZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoB-eI-gwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-50"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fex-97-UT2">
+            <objects>
+                <tabBarController id="YZF-lS-7fW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nnv-Eb-Y0W">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cJR-bk-RtO" kind="relationship" relationship="viewControllers" id="fps-46-qbK"/>
+                        <segue destination="4Fp-2N-76D" kind="relationship" relationship="viewControllers" id="uXG-UU-cew"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SId-a1-58F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="-50"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
